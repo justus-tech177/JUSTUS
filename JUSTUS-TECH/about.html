@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>About Us - JUSTUS-TECH</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+    .about-container {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .about-intro {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .about-intro h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .about-intro p {
+        max-width: 800px;
+        margin: auto;
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+    .about-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .about-card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        transition: 0.3s;
+    }
+
+    .about-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    }
+
+    .about-icon {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+   .about-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #0066cc;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+    .about-card p {
+        line-height: 1.6;
+        font-size: 15px;
+    }
+
+    .about-card ul {
+        text-align: left;
+        line-height: 1.8;
+        padding-left: 20px;
+    }
+
+    .goal-section {
+    margin-top: 45px;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    border-left: 6px solid red;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.goal-title {
+    color: red;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.goal-highlight {
+    color: red;
+    font-weight: bold;
+}
+
+.goal-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: red;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+.goal-section p {
+    max-width: 800px;
+    margin: 20px auto 0;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #444;
+}
+
+    @media (max-width: 800px) {
+        .about-cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 520px) {
+        .about-cards {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .about-image {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-title {
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #007bff;
+    position: relative;
+}
+
+.about-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #007bff;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+.site-name {
+    color: rgb(161, 63, 63);
+    font-family: "Times New Roman", Times, serif;
+}
+
+.about-brand {
+    color: red;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+.moving-brand {
+    color: red;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.moving-brand span {
+    display: inline-block;
+    animation: moveBrand 10s linear infinite;
+}
+
+@keyframes moveBrand {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- HEADER -->
+<header>
+
+   <h1 class="site-name">JUSTUS-TECH COMPUTER ACCESSORIES</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- ABOUT US CONTENT -->
+<main class="about-container">
+
+    <section class="about-intro">
+
+    <h2 class="about-title">About Us</h2>
+
+    <p class="moving-brand">
+        <span>JUSTUS-TECH COMPUTER ACCESSORIES</span>
+    </p>
+
+    <p>
+        A computer technology service provider dedicated to supplying
+        quality computer accessories, providing reliable computer
+        services and offering practical computer training.
+    </p>
+
+</section>
+
+    <!-- THREE INFORMATION CARDS -->
+    <section class="about-cards">
+
+        <!-- COMPUTER TRAINING -->
+        <div class="about-card">
+
+            <div class="about-image">
+    <img src="images/computer-training.jpg" alt="Computer Training">
+</div>
+            <h3>Computer Training</h3>
+
+            <p>
+                We also offer computer course learning for beginners,
+                students and anyone interested in improving their
+                computer skills.
+            </p>
+
+            <ul>
+                <li>Basic computer skills</li>
+                <li>Microsoft Word, Excel and PowerPoint</li>
+                <li>Internet and email</li>
+                <li>Computer hardware and software</li>
+                <li>Networking</li>
+                <li>Basic programming</li>
+                <li>Web development</li>
+            </ul>
+
+        </div>
+
+
+        <!-- COMPUTER SERVICES -->
+        <div class="about-card">
+
+            <div class="about-image">
+    <img src="images/windows-installation.jpg" alt="Windows Installation and Upgrade">
+</div>
+            <h3>Computer Services</h3>
+
+            <p>
+                We provide practical computer services to help
+                individuals and organizations maintain and improve
+                their computer systems.
+            </p>
+
+            <ul>
+                <li>Windows installation</li>
+                <li>Windows upgrades</li>
+                <li>Operating system installation</li>
+                <li>Software installation</li>
+                <li>Computer troubleshooting</li>
+                <li>Driver installation</li>
+                <li>Computer maintenance</li>
+            </ul>
+
+        </div>
+
+
+        <!-- COMPUTER ACTIVITIES -->
+        <div class="about-card">
+
+            <div class="about-image">
+    <img src="images/computer-repair.jpg" alt="Computer Repair and Maintenance">
+</div>
+
+            <h3>Computer Activities</h3>
+
+            <p>
+                We perform different computer-related activities
+                involving both hardware and software.
+            </p>
+
+            <ul>
+                <li>Computer formatting</li>
+                <li>Hardware installation</li>
+                <li>Hardware replacement</li>
+                <li>Virus and malware removal</li>
+                <li>Networking and configuration</li>
+                <li>Data backup and transfer</li>
+                <li>System updates</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- OUR GOAL -->
+    <section class="goal-section">
+
+    <h2 class="goal-title">Our Goal</h2>
+
+    <p>
+        Our goal is to provide affordable, reliable and practical
+        computer solutions while helping individuals gain useful
+        computer skills for education, work and everyday life.
+
+        <span class="goal-highlight">
+            At JUSTUS-TECH COMPUTER ACCESSORIES
+        </span>, we believe that technology should be accessible,
+        practical and easy to learn.
+    </p>
+
+</section>
+
+</main>
+```
+
+</body>
+
+</html>

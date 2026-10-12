@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products - JUSTUS-TECH</title>
+
+    <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* BUY NOW BUTTON */
+        .buy-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(135deg, #007bff, #0056d6);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 12px rgba(0, 123, 255, 0.3);
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #0056d6, #003f9e);
+            box-shadow: 0 8px 18px rgba(0, 86, 214, 0.4);
+        }
+
+
+        /* PRODUCTS CONTAINER */
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(3, 230px);
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+
+        /* PRODUCT CARD */
+        .product-card {
+            width: 230px;
+            min-height: 390px;
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+        }
+
+
+        /* PRODUCT IMAGE */
+        .product-image {
+            width: 100%;
+            height: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-image img {
+            width: 180px;
+            height: 130px;
+            object-fit: contain;
+            display: block;
+        }
+
+
+        /* PRODUCT INFORMATION */
+        .product-info {
+            text-align: center;
+        }
+
+        .product-category {
+            display: inline-block;
+            font-size: 13px;
+            color: #007bff;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .product-card h3 {
+            margin: 8px 0;
+            font-size: 18px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            line-height: 1.4;
+            min-height: 60px;
+        }
+
+        .product-card h4 {
+            font-size: 17px;
+            margin: 10px 0;
+        }
+
+
+        /* RATING */
+        .rating {
+            margin: 5px 0;
+        }
+
+
+        /* CATEGORY BUTTONS */
+        .category-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px auto;
+        }
+
+        .category-buttons button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .category-buttons button:hover {
+            background: #0056d6;
+            transform: translateY(-2px);
+        }
+
+
+        /* MOBILE PRODUCTS */
+        @media (max-width: 800px) {
+
+            .products-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .product-card {
+                width: 100%;
+            }
+
+            .product-image img {
+                max-width: 160px;
+            }
+        }
+
+
+        @media (max-width: 520px) {
+
+            .products-container {
+                grid-template-columns: 1fr;
+                max-width: 320px;
+                margin: auto;
+            }
+
+            .product-card {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>JUSTUS-TECH COMPUTER ACCESSORIES</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <h2 class="products-title">Our Products</h2>
+
+
+        <!-- SEARCH -->
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search for products..."
+            >
+
+        </div>
+
+
+        <!-- CATEGORY BUTTONS -->
+        <div class="category-buttons">
+
+            <button onclick="filterProducts('all')">All</button>
+
+            <button onclick="filterProducts('Keyboard')">
+                Keyboards
+            </button>
+
+            <button onclick="filterProducts('Mouse')">
+                Mouse
+            </button>
+
+            <button onclick="filterProducts('Storage')">
+                Storage
+            </button>
+
+            <button onclick="filterProducts('Audio')">
+                Audio
+            </button>
+
+            <button onclick="filterProducts('Monitor')">
+                Monitors
+            </button>
+
+            <button onclick="filterProducts('Cable')">
+                Cables
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div class="products-container">
+
+
+            <!-- KEYBOARD -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/keyboard.jpg"
+                         alt="Computer Keyboard">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Keyboard
+                    </span>
+
+                    <h3>Computer Keyboard</h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p>
+                        Quality USB keyboard suitable for
+                        desktop computers and laptops.
+                    </p>
+
+                    <h4>UGX 30,000</h4>
+
+                    <a
+                        href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20a%20Computer%20Keyboard%20for%20UGX%2030,000."
+                        class="buy-btn">
+                        🛒 Buy Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOUSE -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/mouse.jpg"
+                         alt="Computer Mouse">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Mouse
+                    </span>
+
+                    <h3>Computer Mouse</h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p>
+                        Comfortable and responsive USB mouse
+                        for everyday computer use.
+                    </p>
+
+                    <h4>UGX 25,000</h4>
+
+                    <a
+                        href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20a%20Computer%20Mouse%20for%20UGX%2025,000."
+                        class="buy-btn">
+                        🛒 Buy Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- FLASH DISK -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/flashdisk.jpg"
+                         alt="USB Flash Disk">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Storage
+                    </span>
+
+                    <h3>USB Flash Disk</h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p>
+                        Reliable storage devices for
+                        transferring and keeping your files.
+                    </p>
+
+                    <h4>UGX 20,000</h4>
+
+                    <a
+                        href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20a%20USB%20Flash%20Disk%20for%20UGX%2020,000."
+                        class="buy-btn">
+                        🛒 Buy Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HEADPHONES -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/headphones.jpg"
+                         alt="Computer Headphones">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Audio
+                    </span>
+
+                    <h3>Headphones</h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p>
+                        Quality headphones for
+                        music, meetings and entertainment.
+                    </p>
+
+                    <h4>UGX 35,000</h4>
+
+                    <a
+                        href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20Headphones%20for%20UGX%2035,000."
+                        class="buy-btn">
+                        🛒 Buy Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- MONITOR -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/monitor.jpg"
+                         alt="Computer Monitor">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Monitor
+                    </span>
+
+                    <h3>Computer Monitor</h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p>
+                        Clear and high-quality monitors for
+                        office and home computers.
+                    </p>
+
+                    <h4>UGX 550,000</h4>
+
+                    <a
+                        href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20a%20Computer%20Monitor%20for%20UGX%20550,000."
+                        class="buy-btn">
+                        🛒 Buy Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- USB CABLE -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/usbcable.jpg"
+                         alt="USB Cable">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Cable
+                    </span>
+
+                    <h3>USB Cable</h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p>
+                        Durable USB cables for charging,
+                        data transfer and connecting devices.
+                    </p>
+
+                    <h4>UGX 15,000</h4>
+
+                    <a
+                        href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20a%20USB%20Cable%20for%20UGX%2015,000."
+                        class="buy-btn">
+                        🛒 Buy Now
+                    </a>
+
+                </div>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <!-- ABOUT -->
+            <div class="footer-section">
+
+                <h2>JUSTUS-TECH</h2>
+
+                <p>
+                    Your trusted source for quality computer
+                    accessories, computer training,
+                    installation and technical services.
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-section">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="products.html">Products</a>
+
+                <a href="contact.html">Contact Us</a>
+
+            </div>
+
+
+            <!-- SERVICES -->
+            <div class="footer-section">
+
+                <h3>Our Services</h3>
+
+                <p>Computer Accessories</p>
+
+                <p>Computer Repair</p>
+
+                <p>Windows Installation</p>
+
+                <p>Networking</p>
+
+                <p>Computer Training</p>
+
+            </div>
+
+
+            <!-- CONTACT -->
+<div class="footer-section">
+
+    <h3>Contact Us</h3>
+
+    <p>
+        <i class="fas fa-phone"></i>
+        Phone: 0742910177
+    </p>
+    <p>
+        <i class="fab fa-whatsapp"></i>
+        WhatsApp: 0742910177
+    </p>
+    <p>
+        <i class="fas fa-envelope"></i>
+        Email: nuwagabajustustech@gmail.com
+    </p>
+    <p>
+        <i class="fas fa-location-dot"></i>
+        Location: Biharwe-Mbarara, Uganda
+    </p>
+            </div>
+
+
+
+        <!-- SOCIAL MEDIA -->
+
+    <div class="social-links">
+
+    <a href="#" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+        <span>Facebook</span>
+    </a>
+
+    <a href="https://wa.me/256742910177" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <a href="#" title="Instagram">
+        <i class="fab fa-instagram"></i>
+        <span>Instagram</span>
+    </a>
+
+    <a href="#" title="TikTok">
+        <i class="fab fa-tiktok"></i>
+        <span>TikTok</span>
+    </a>
+
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 JUSTUS-TECH COMPUTER ACCESSORIES.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- SEARCH SCRIPT -->
+
+    <script>
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const products =
+            document.querySelectorAll(".product-card");
+
+
+        searchInput.addEventListener("keyup", function () {
+
+            const searchText =
+                searchInput.value.toLowerCase();
+
+
+            products.forEach(function (product) {
+
+                const productName =
+                    product
+                    .querySelector("h3")
+                    .textContent
+                    .toLowerCase();
+
+
+                if (productName.includes(searchText)) {
+
+                    product.style.display = "";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+
+    <!-- CATEGORY FILTER SCRIPT -->
+
+    <script>
+
+        function filterProducts(category) {
+
+            const products =
+                document.querySelectorAll(".product-card");
+
+
+            products.forEach(function (product) {
+
+                const productCategory =
+                    product
+                    .querySelector(".product-category")
+                    .textContent;
+
+
+                if (
+                    category === "all" ||
+                    productCategory === category
+                ) {
+
+                    product.style.display = "";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>

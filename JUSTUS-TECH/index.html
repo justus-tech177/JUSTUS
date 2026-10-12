@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JUSTUS-TECH COMPUTER ACCESSORIES</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<script>
+
+const searchInput = document.getElementById("searchInput");
+const products = document.querySelectorAll(".product-card");
+
+searchInput.addEventListener("keyup", function() {
+
+    const searchText = searchInput.value.toLowerCase();
+
+    products.forEach(function(product) {
+
+        const productName =
+            product.querySelector("h3").textContent.toLowerCase();
+
+        if (productName.includes(searchText)) {
+            product.style.display = "";
+        } else {
+            product.style.display = "none";
+        }
+
+    });
+
+});
+
+</script>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+    <img src="logo.jpg" alt="logo">
+</div>
+
+        <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+</nav>
+    </header>
+
+    <main>
+        <section class="reviews">
+
+    <h2>What Our Customers Say</h2>
+
+    <div class="review-container">
+
+        <div class="review-card">
+            <div class="customer-photo">
+    <img src="images/customer.jpg" alt="Customer">
+</div>
+            <p>
+                "I got a quality keyboard and the service was excellent."
+            </p>
+            <h3>Customer</h3>
+        </div>
+
+        <div class="review-card">
+            <div class="customer-photo">
+    <img src="images/student.jpg" alt="Student">
+</div>
+            <p>
+                "The computer training was practical and easy to understand."
+            </p>
+            <h3>Student</h3>
+        </div>
+
+        <div class="review-card">
+            <div class="customer-photo">
+    <img src="images/customer.jpg" alt="Customer">
+</div>
+            <p>
+                "My computer was repaired quickly and works well again."
+            </p>
+            <h3>Customer</h3>
+        </div>
+
+
+</section>
+    </main>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>JUSTUS-TECH</h1>
+
+            <h2>COMPUTER ACCESSORIES</h2>
+
+        <marquee behaviour="alternate" bgcolor="black" style="color:aliceblue;padding:10px">
+            Welcome to JUSTUS-TECH Computer Accessories,
+                your trusted place for quality computer accessories
+                at affordable prices.
+            </marquee>
+
+            <a href="#products" class="button">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+<!-- PRODUCTS SECTION -->
+<section id="products">
+    <h2 class="section-title">Our Computer Accessories</h2>
+
+    <div class="products-container">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-icon">
+                <img src="images/keyboard.jpg" alt="Computer Keyboard">
+            </div>
+            <h3>Computer Keyboard</h3>
+            <p>
+                Quality USB keyboard suitable for
+                desktop computers and laptops.
+            </p>
+            <h4>UGX 120,000</h4>
+            <a href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20a%20Computer%20Keyboard"
+               class="buy-button">
+                <i class="fas fa-shopping-bag"></i> Buy Now
+            </a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-icon">
+                <img src="images/mouse.jpg" alt="Computer Mouse">
+            </div>
+            <h3>Computer Mouse</h3>
+            <p>
+                Comfortable and responsive USB mouse
+                for everyday computer use.
+            </p>
+            <h4>UGX 25,000</h4>
+            <a href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20a%20Computer%20Mouse"
+               class="buy-button">
+                <i class="fas fa-shopping-bag"></i> Buy Now
+            </a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-icon">
+                <img src="images/flashdisk.jpg" alt="USB Flash Disk">
+            </div>
+            <h3>USB Flash Disk</h3>
+            <p>
+                Reliable storage devices for
+                transferring and keeping your files.
+            </p>
+            <h4>UGX 20,000</h4>
+            <a href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20a%20USB%20Flash%20Disk"
+               class="buy-button">
+                <i class="fas fa-shopping-bag"></i> Buy Now
+            </a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="product-icon">
+                <img src="images/headphones.jpg" alt="Computer Headphones">
+            </div>
+            <h3>Headphones</h3>
+            <p>
+                Quality headphones for
+                music, meetings and entertainment.
+            </p>
+            <h4>UGX 35,000</h4>
+            <a href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20Headphones"
+               class="buy-button">
+                <i class="fas fa-shopping-bag"></i> Buy Now
+            </a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <div class="product-icon">
+                <img src="images/monitor.jpg" alt="Computer Monitor">
+            </div>
+            <h3>Computer Monitor</h3>
+            <p>
+                Clear and high-quality monitors for
+                office and home computer use.
+            </p>
+            <h4>UGX 550,000</h4>
+            <a href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20a%20Computer%20Monitor"
+               class="buy-button">
+                <i class="fas fa-shopping-bag"></i> Buy Now
+            </a>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <div class="product-icon">
+                <img src="images/usbcable.jpg" alt="USB Cable">
+            </div>
+            <h3>USB Cable</h3>
+            <p>
+                Durable USB cables for charging,
+                data transfer and connecting devices.
+            </p>
+            <h4>UGX 15,000</h4>
+            <a href="https://wa.me/256742910177?text=Hello%20JUSTUS-TECH,%20I%20would%20like%20to%20order%20a%20USB%20Cable"
+               class="buy-button">
+                <i class="fas fa-shopping-bag"></i> Buy Now
+            </a>
+        </div>
+
+</section>
+
+
+
+    <!-- ABOUT US -->
+    <section id="about" class="about">
+
+        <h2>About JUSTUS-TECH</h2>
+
+        <p>
+            JUSTUS-TECH COMPUTER ACCESSORIES is a computer
+            accessories business providing quality and affordable
+            computer products to students, businesses and
+            individual customers.
+        </p>
+
+        <p>
+            Our products include keyboards, mice, flash disks,
+            headphones, monitors, USB cables and many other
+            computer accessories.
+        </p>
+
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Get in touch with JUSTUS-TECH COMPUTER ACCESSORIES
+            for orders and inquiries.
+        </p>
+
+        <p><strong>Phone:</strong> +256 742910177 or +256 790664331</p>
+
+        <p><strong>Email:</strong> nuwagabajustustech@gmail.com</p>
+
+        <p><strong>Location:</strong> Biharwe-Mbarara Uganda</p>
+
+        <section class="featured-products">
+
+    <h2>Featured Products</h2>
+
+    <div class="home-products">
+
+        <div class="product-card">
+            <img src="images/keyboard.jpg" alt="Keyboard">
+            <h3>Computer Keyboard</h3>
+            <p>UGX 25,000</p>
+            <a href="products.html" class="home-btn">View Product</a>
+        </div>
+
+        <div class="product-card">
+            <img src="images/mouse.jpg" alt="Mouse">
+            <h3>Computer Mouse</h3>
+            <p>UGX 25,000</p>
+            <a href="products.html" class="home-btn">View Product</a>
+        </div>
+
+        <div class="product-card">
+            <img src="images/flashdisk.jpg" alt="Flash Disk">
+            <h3>USB Flash Disk</h3>
+            <p>UGX 20,000</p>
+            <a href="products.html" class="home-btn">View Product</a>
+        </div>
+
+        <div class="product-card">
+            <img src="images/headphones.jpg" alt="Headphones">
+            <h3>Headphones</h3>
+            <p>UGX 35,000</p>
+            <a href="products.html" class="home-btn">View Product</a>
+        </div>
+
+        <div class="product-card">
+            <img src="images/monitor.jpg" alt="Monitor">
+            <h3>Computer Monitor</h3>
+            <p>UGX 550,000</p>
+            <a href="products.html" class="home-btn">View Product</a>
+        </div>
+
+        <div class="product-card">
+            <img src="images/usbcable.jpg" alt="USB Cable">
+            <h3>USB Cable</h3>
+            <p>UGX 15,000</p>
+            <a href="products.html" class="home-btn">View Product</a>
+        </div>
+
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+    <h3>JUSTUS-TECH COMPUTER ACCESSORIES</h3>
+
+    <p>
+        Quality Computer Accessories at Affordable Prices.
+    </p>
+
+    <div class="social-links">
+
+        <a href="https://facebook.com/" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+
+        <a href="https://x.com/" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+
+        <a href="https://instagram.com/" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://wa.me/256742910177" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="mailto:nuwagabajustustech@gmail.com">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <a href="tel:+256742910177">
+            <i class="fas fa-phone"></i>
+        </a>
+
+    </div>
+
+    <p>
+        &copy; 2026 JUSTUS-TECH. All Rights Reserved.
+    </p>
+
+</footer>
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-section">
+
+            <h2>JUSTUS-TECH</h2>
+
+            <p>
+                Quality computer accessories, computer services
+                and practical computer training.
+            </p>
+
+        </div>
+
+
+        <div class="footer-section">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div class="footer-section">
+
+            <h3>Our Services</h3>
+
+            <p>Computer Training</p>
+            <p>Windows Installation</p>
+            <p>Computer Repair</p>
+            <p>Networking</p>
+
+        </div>
+
+
+        <div class="footer-section">
+
+            
+<!-- CONTACT US -->
+<div class="footer-section">
+    <h3>Contact Us</h3>
+
+    <p>
+        <i class="fas fa-phone"></i>
+        <a href="tel:+256742910177">+256 742 910177</a>
+    </p>
+
+    <p>
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/256742910177" target="_blank">
+            WhatsApp Us
+        </a>
+    </p>
+
+    <p>
+        <i class="fas fa-location-dot"></i>
+        <a href="https://www.google.com/maps/search/?api=1&query=Biharwe%2C+Mbarara%2C+Uganda"
+           target="_blank">
+            Biharwe, Mbarara, Uganda
+        </a>
+    </p>
+</div>
+
+
+
+</body>
+</html>

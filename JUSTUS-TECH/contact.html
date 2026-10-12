@@ -1,0 +1,304 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us - JUSTUS-TECH COMPUTER ACCESSORIES</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f6fa;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: #0b1f3a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #123c69;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00c6ff;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        /* Centered Contact Us */
+        .contact-container h2 {
+            text-align: center;
+            font-size: 35px;
+            color: #0b1f3a;
+            margin-bottom: 10px;
+        }
+
+        .contact-container .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        /* Contact Boxes */
+        .contact-content {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-info,
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-info h3,
+        .contact-form h3 {
+            color: #123c69;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 18px 0;
+            font-size: 16px;
+        }
+
+        .contact-info span {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        /* Form */
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #123c69;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #00a8e8;
+        }
+
+        /* Footer */
+        footer {
+            background: #0b1f3a;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        .moving-contact {
+    color: red !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-weight: bold !important;
+    font-size: 38px;
+    text-align: center;
+    white-space: nowrap;
+    animation: contactMove 10s linear infinite;
+}
+
+@keyframes contactMove {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+.send-btn {
+    background: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+}
+
+.send-btn i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>JUSTUS-TECH COMPUTER ACCESSORIES</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+
+       <h2 class="moving-contact">Contact Us</h2>
+
+        <p class="intro">
+            Have a question or need assistance? We would love to hear from you.
+        </p>
+
+        <div class="contact-content">
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+
+                <h3>Get In Touch</h3>
+<!-- CONTACT DETAILS -->
+
+<p>
+    <i class="fas fa-map-marker-alt"></i>
+    Location: Biharwe-Mbarara, Uganda
+</p>
+
+<p>
+    <i class="fas fa-phone"></i>
+    Phone: 0742910177
+</p>
+
+<p>
+    <i class="fas fa-envelope"></i>
+    Email: nuwagabajustustech@gmail.com
+</p>
+
+<p>
+    <i class="fas fa-desktop"></i>
+    Desktop: Computer Repair & Accessories
+</p>
+
+
+            </div>
+<form id="contactForm">
+
+    <input type="text" id="name" placeholder="Your Name" required>
+
+    <input type="email" id="email" placeholder="Your Email" required>
+
+    <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+    <textarea id="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit" class="send-btn">
+        <i class="fab fa-whatsapp"></i> Send Us Message
+    </button>
+
+</form>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const whatsappMessage =
+        "Hello JUSTUS-TECH COMPUTER ACCESSORIES!\n\n" +
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Phone: " + phone + "\n" +
+        "Message: " + message;
+
+    const whatsappNumber = "256742910177";
+
+    const whatsappURL =
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + encodeURIComponent(whatsappMessage);
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 JUSTUS-TECH COMPUTER ACCESSORIES. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
